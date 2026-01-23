@@ -1,0 +1,15 @@
+{
+  "sein-pai": {
+    "latest": "1.0.0",
+    "versions": {
+      "1.0.0": {
+        "download_url": "https://placeholder.blob.vercel-storage.com/firmware/sein-pai_1.0.0.bin",
+        "checksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "file_size": 1048576,
+        "min_battery": 20,
+        "release_notes": "Initial release",
+        "released_at": "2025-01-23T10:00:00Z"
+      }
+    }
+  }
+}
