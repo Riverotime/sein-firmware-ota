@@ -1,7 +1,15 @@
 {
   "sein-pai": {
-    "latest": "0.1.0",
+    "latest": "0.2.0",
     "versions": {
+      "0.2.0": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.2.0.bin",
+        "checksum_sha256": "54e7f74bb6bb280ca9ccc4db9d17891b70b7fab9d67a69158b79c8dc88e9a69d",
+        "file_size": 2199360,
+        "min_battery": 20,
+        "release_notes": "修复蓝牙绑定设备RPA地址轮换导致第二天无法连接的问题",
+        "released_at": "2025-02-16T14:30:00Z"
+      },
       "0.1.0": {
         "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.1.0.bin",
         "checksum_sha256": "56402bb4d9fe5bf67c248d11958463454b60afba8433ee972e3367ecedc54a74",
