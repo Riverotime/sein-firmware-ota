@@ -4,11 +4,11 @@
     "versions": {
       "0.2.2": {
         "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.2.2.bin",
-        "checksum_sha256": "5cf884448a2f51de499363c37ea0dfd1da5b472870ed3c18fb532489fbae8467",
-        "file_size": 2371360,
+        "checksum_sha256": "c052a426451a07ec46ec012d3e354126c4d5edbe144944652c5e61e0c26c3c69",
+        "file_size": 2438736,
         "min_battery": 20,
-        "release_notes": "1.修复WiFi扫描时断开已有连接的问题 2.优化强制OTA升级流程",
-        "released_at": "2025-02-19T03:20:00Z"
+        "release_notes": "1.修复WiFi扫描时断开已有连接的问题 2.优化强制OTA升级流程 3.优化拍照延迟",
+        "released_at": "2025-02-19T03:45:00Z"
       },
       "0.2.1": {
         "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.2.1.bin",
