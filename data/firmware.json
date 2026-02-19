@@ -1,7 +1,15 @@
 {
   "sein-pai": {
-    "latest": "0.2.2",
+    "latest": "0.2.3",
     "versions": {
+      "0.2.3": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.2.3.bin",
+        "checksum_sha256": "19e57fd0791cfd7d57a9242aebc9e6c69433cc7bb984e9cc3abeef7946c676c9",
+        "file_size": 2438736,
+        "min_battery": 20,
+        "release_notes": "1.优化蓝牙命令处理逻辑 2.修复定时器相关问题 3.优化电池状态检测 4.改进摄像头稳定性",
+        "released_at": "2025-02-19T10:30:00Z"
+      },
       "0.2.2": {
         "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.2.2.bin",
         "checksum_sha256": "c052a426451a07ec46ec012d3e354126c4d5edbe144944652c5e61e0c26c3c69",
