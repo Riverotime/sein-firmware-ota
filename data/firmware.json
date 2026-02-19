@@ -1,7 +1,15 @@
 {
   "sein-pai": {
-    "latest": "0.2.4",
+    "latest": "0.2.5",
     "versions": {
+      "0.2.5": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.2.5.bin",
+        "checksum_sha256": "d81571063f3e9323861994a26b06382df62a3993728549f83c91aff5973edfd2",
+        "file_size": 2438800,
+        "min_battery": 20,
+        "release_notes": "1.修复WiFi扫描后状态不同步导致连接失败 2.优化NVS写入(仅关机/重启时保存时间戳) 3.减少NVS磨损",
+        "released_at": "2026-02-20T16:45:00Z"
+      },
       "0.2.4": {
         "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.2.4.bin",
         "checksum_sha256": "83d4e0eee35e2d6121adeda673f86c0fef5f244d0793e3e27c61659a8bfc657a",
