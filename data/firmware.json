@@ -1,7 +1,15 @@
 {
   "sein-pai": {
-    "latest": "0.2.5",
+    "latest": "0.2.6",
     "versions": {
+      "0.2.6": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.2.6.bin",
+        "checksum_sha256": "52ef15f68d014c630b8fb2f2307a4dc40b33f2b407c08ee4f1a83a715d9f515f",
+        "file_size": 2438800,
+        "min_battery": 20,
+        "release_notes": "1.修复OTA内存不足问题(释放视频缓冲区)",
+        "released_at": "2026-02-20T17:00:00Z"
+      },
       "0.2.5": {
         "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.2.5.bin",
         "checksum_sha256": "d81571063f3e9323861994a26b06382df62a3993728549f83c91aff5973edfd2",
