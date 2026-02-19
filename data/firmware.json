@@ -1,7 +1,15 @@
 {
   "sein-pai": {
-    "latest": "0.2.3",
+    "latest": "0.2.4",
     "versions": {
+      "0.2.4": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.2.4.bin",
+        "checksum_sha256": "83d4e0eee35e2d6121adeda673f86c0fef5f244d0793e3e27c61659a8bfc657a",
+        "file_size": 1985024,
+        "min_battery": 20,
+        "release_notes": "1.增加BLE绑定调试日志 2.设备重置时同时清除设备名 3.优化电池检测 4.改进摄像头稳定性",
+        "released_at": "2026-02-20T15:40:00Z"
+      },
       "0.2.3": {
         "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.2.3.bin",
         "checksum_sha256": "19e57fd0791cfd7d57a9242aebc9e6c69433cc7bb984e9cc3abeef7946c676c9",
