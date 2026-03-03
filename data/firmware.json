@@ -1,7 +1,15 @@
 {
   "sein-pai": {
-    "latest": "0.2.6",
+    "latest": "0.2.9",
     "versions": {
+      "0.2.9": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.2.9.bin",
+        "checksum_sha256": "eb1139f49a327a182f168b2ecf90f7b8060abb0d6a9992c82873bdc680784745",
+        "file_size": 1986496,
+        "min_battery": 20,
+        "release_notes": "Version 0.2.9 update",
+        "released_at": "2026-03-03T12:49:00Z"
+      },
       "0.2.6": {
         "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.2.6.bin",
         "checksum_sha256": "52ef15f68d014c630b8fb2f2307a4dc40b33f2b407c08ee4f1a83a715d9f515f",
