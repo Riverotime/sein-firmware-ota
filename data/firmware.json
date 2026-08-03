@@ -1,14 +1,250 @@
 {
   "sein-pai": {
-    "latest": "0.3.0",
+    "latest": "0.5.15",
     "versions": {
-      "0.3.0": {
-        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.3.0.bin",
-        "checksum_sha256": "ebbf53cff0b9720ac5ec50dc148e5c55e87f8e6fb0b639ff24bcfcff2925e19d",
-        "file_size": 1986576,
+      "0.5.15": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.15.bin",
+        "checksum_sha256": "8fa9f75232e7ea4e5f860226caf39e8a3e784a66aec5964ed6c3a4821bfa6387",
+        "file_size": 1844480,
         "min_battery": 20,
-        "release_notes": "Version 0.3.0 update",
-        "released_at": "2026-03-05T14:49:00Z"
+        "release_notes": "省电睡眠模式；连接安全加固；自动拍照质量优化",
+        "released_at": "2026-08-03T00:00:00Z"
+      },
+      "0.5.13": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.13.bin",
+        "checksum_sha256": "0ee8299d069063a973da47bda3305606cad3a9f522500eab55bd71369aabd4af",
+        "file_size": 1842592,
+        "min_battery": 20,
+        "release_notes": "优化续航，修复亏电无法开机问题",
+        "released_at": "2026-07-06T00:00:00Z",
+        "recovery_assets": {
+          "bootloader": {
+            "url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.13_bootloader.bin",
+            "address": 0,
+            "size": 22320,
+            "checksum_sha256": "bf85b547ac0cb8dfcf0d4b47a5fa157441fb1b86e89e99b5ceee3ec66a4211da"
+          },
+          "partition_table": {
+            "url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.13_partition-table.bin",
+            "address": 61440,
+            "size": 3072,
+            "checksum_sha256": "2f2d2d8e393bc987d5e8c7c7558a7784ad1c3fb03268336fbb562ffe344ec376"
+          },
+          "ota_data_initial": {
+            "url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.13_ota_data_initial.bin",
+            "address": 196608,
+            "size": 8192,
+            "checksum_sha256": "7d2c7ac4888bfd75cd5f56e8d61f69595121183afc81556c876732fd3782c62f"
+          },
+          "app": {
+            "address": 262144
+          }
+        }
+      },
+      "0.5.12": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.12.bin",
+        "checksum_sha256": "856294117b5f0d489529956f02e91fcebb5a49472d7a87823d90a6d97fdb5b70",
+        "file_size": 1840016,
+        "min_battery": 20,
+        "release_notes": "蓝牙断开时长按关机 + 充电态低电关机保护(防边充边耗到亏电重启) + 音频无消费者空转退避(降低连不上时CPU占用)",
+        "released_at": "2026-06-24T00:00:00Z",
+        "recovery_assets": {
+          "bootloader": {
+            "url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.12_bootloader.bin",
+            "address": 0,
+            "size": 22320,
+            "checksum_sha256": "6091a42cbb6c147b8f0f46d55de1d3d617ca80e3f0ddffb29b20ee5bc7213281"
+          },
+          "partition_table": {
+            "url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.12_partition-table.bin",
+            "address": 61440,
+            "size": 3072,
+            "checksum_sha256": "2f2d2d8e393bc987d5e8c7c7558a7784ad1c3fb03268336fbb562ffe344ec376"
+          },
+          "ota_data_initial": {
+            "url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.12_ota_data_initial.bin",
+            "address": 196608,
+            "size": 8192,
+            "checksum_sha256": "7d2c7ac4888bfd75cd5f56e8d61f69595121183afc81556c876732fd3782c62f"
+          },
+          "app": {
+            "address": 262144
+          }
+        }
+      },
+      "0.5.11": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.11.bin",
+        "checksum_sha256": "22f91aa7340d15fe9f7b755f6fc1413e3cb99959e11473eb321ea4c17a4f32a5",
+        "file_size": 1839552,
+        "min_battery": 20,
+        "release_notes": "修复 SD 同步路径“当前时间小于文件时间”刷屏死循环 + 修复进 deep sleep 前 NVS 存错变量(persistent_timer)",
+        "released_at": "2026-06-19T00:00:00Z",
+        "recovery_assets": {
+          "bootloader": {
+            "url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.11_bootloader.bin",
+            "address": 0,
+            "size": 22320,
+            "checksum_sha256": "1331d7752ac83d7d750f7e8a0d447256079e421904d783c78d57d545656578bf"
+          },
+          "partition_table": {
+            "url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.11_partition-table.bin",
+            "address": 61440,
+            "size": 3072,
+            "checksum_sha256": "2f2d2d8e393bc987d5e8c7c7558a7784ad1c3fb03268336fbb562ffe344ec376"
+          },
+          "ota_data_initial": {
+            "url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.11_ota_data_initial.bin",
+            "address": 196608,
+            "size": 8192,
+            "checksum_sha256": "7d2c7ac4888bfd75cd5f56e8d61f69595121183afc81556c876732fd3782c62f"
+          },
+          "app": {
+            "address": 262144
+          }
+        }
+      },
+      "0.5.10": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.10.bin",
+        "checksum_sha256": "981d8e6582a99a28a8056dde65d7b120e82265466672cda8c86fc07e3d5bb138",
+        "file_size": 1839600,
+        "min_battery": 20,
+        "release_notes": "修复日常讲话设备识别不到人声(VAD 决策窗口和起始帧门槛过严) + 插 USB / 按下按钮瞬间 LED 高亮闪一下状态色给反馈",
+        "released_at": "2026-06-19T00:00:00Z",
+        "recovery_assets": {
+          "bootloader": {
+            "url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.10_bootloader.bin",
+            "address": 0,
+            "size": 22320,
+            "checksum_sha256": "1331d7752ac83d7d750f7e8a0d447256079e421904d783c78d57d545656578bf"
+          },
+          "partition_table": {
+            "url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.10_partition-table.bin",
+            "address": 61440,
+            "size": 3072,
+            "checksum_sha256": "2f2d2d8e393bc987d5e8c7c7558a7784ad1c3fb03268336fbb562ffe344ec376"
+          },
+          "ota_data_initial": {
+            "url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.10_ota_data_initial.bin",
+            "address": 196608,
+            "size": 8192,
+            "checksum_sha256": "7d2c7ac4888bfd75cd5f56e8d61f69595121183afc81556c876732fd3782c62f"
+          },
+          "app": {
+            "address": 262144
+          }
+        }
+      },
+      "0.5.9": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.9.bin",
+        "checksum_sha256": "a27e4c54483cbb64865ea8d2acbae29ef49fa6dcaf9df22ac2882bba61d068d2",
+        "file_size": 1839584,
+        "min_battery": 20,
+        "release_notes": "修复 App 里显示的固件版本号不准(之前一直停在 0.5.0)",
+        "released_at": "2026-06-19T00:00:00Z"
+      },
+      "0.5.8": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.8.bin",
+        "checksum_sha256": "4657f0810d0e3da03a2ee87cdce6526c0a3c34c24a6aba48487534b32ca7fdf5",
+        "file_size": 1761936,
+        "min_battery": 20,
+        "release_notes": "按键双击识别优化(连击间隔放宽) + 关机灯渐隐 + LED指示优化(拍照绿灯/已连接蓝灯/未连接单击亮灯重连) + 视觉模式",
+        "released_at": "2026-06-12T00:00:00Z"
+      },
+      "0.5.7": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.7.bin",
+        "checksum_sha256": "a75c41f777967c5fd9a26eac438381c0df4127afd503d1b666f6fba58c3330e4",
+        "file_size": 1761792,
+        "min_battery": 20,
+        "release_notes": "开机死循环修复 + 电量算法优化(校准曲线/3.0V关机/满电自学习) + LED 指示灯重设计 + 断开自动深睡省电 + BLE 启动重试 + 修复 LED 驱动并发崩溃 + 长续航优化",
+        "released_at": "2026-06-11T00:00:00Z"
+      },
+      "0.5.6": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.6.bin",
+        "checksum_sha256": "c6257244822c82b3f499020ac1fb9ced33a9413febe0ffb22b2c0742727faad8",
+        "file_size": 1761648,
+        "min_battery": 20,
+        "release_notes": "开机死循环修复 + 电量算法优化(校准曲线/3.0V关机/满电自学习) + LED 指示灯重设计 + 断开自动深睡省电 + BLE 启动重试 + 修复 LED 驱动并发崩溃",
+        "released_at": "2026-06-08T00:00:00Z"
+      },
+      "0.5.5": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.5.bin",
+        "checksum_sha256": "7ba51c4b826b42200d3adc2781767f8a87c73038d284a612770ebbf6affe1da9",
+        "file_size": 1825248,
+        "min_battery": 20,
+        "release_notes": "修复蓝牙断联音频丢失问题 + OTA 充电中允许 30% 升级",
+        "released_at": "2026-05-28T00:00:00Z"
+      },
+      "0.5.4": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.4.bin",
+        "checksum_sha256": "68296bbeecc3619a686611d320441e33fc79c2b53ceb7466af2cf72d112d2578",
+        "file_size": 1824144,
+        "min_battery": 20,
+        "release_notes": "启动稳定性 + 续航",
+        "released_at": "2026-05-28T00:00:00Z"
+      },
+      "0.5.3": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.3.bin",
+        "checksum_sha256": "67163b8cae1373b6108e85e88d8d948e1659577d688e1d052bb96fbd92d36b94",
+        "file_size": 1823376,
+        "min_battery": 20,
+        "release_notes": "LED 状态机整改 + 重置流程优化 + 续航优化 + 按键内存泄漏修复",
+        "released_at": "2026-05-26T00:00:00Z"
+      },
+      "0.5.2": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.2.bin",
+        "checksum_sha256": "709bf0164bbdec9268c0c2336666d354d32a2a79dcb7089d917ccaab158744bd",
+        "file_size": 1818624,
+        "min_battery": 20,
+        "release_notes": "Version 0.5.2 update",
+        "released_at": "2026-05-21T00:00:00Z"
+      },
+      "0.5.1": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.1.bin",
+        "checksum_sha256": "672d23a42cfe6cc8e740537a9c8ab30fc02e0e2d4d3a92778e126e597ede9ba8",
+        "file_size": 1595696,
+        "min_battery": 20,
+        "release_notes": "Version 0.5.1 update",
+        "released_at": "2026-05-15T00:00:00Z"
+      },
+      "0.5.0": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.0.bin",
+        "checksum_sha256": "33f1e4e431b9653d08e81d1b375a4ed71f841725f4bbb7200281a188ebc5879d",
+        "file_size": 1806944,
+        "min_battery": 20,
+        "release_notes": "Version 0.5.0 update",
+        "released_at": "2026-05-03T00:00:00Z"
+      },
+      "0.4.9": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.4.9.bin",
+        "checksum_sha256": "b97b3c8d31521bcd9935ed7017c232c6a2345f3775e4f153ad48718329127a20",
+        "file_size": 1806336,
+        "min_battery": 20,
+        "release_notes": "Version 0.4.9 update",
+        "released_at": "2026-05-03T00:00:00Z"
+      },
+      "0.4.8": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.4.8.bin",
+        "checksum_sha256": "684e75a01a3c489f68cd0376967e493dd08570f1147dacbb48dbf2e05a8653fe",
+        "file_size": 1593024,
+        "min_battery": 20,
+        "release_notes": "Version 0.4.8 update",
+        "released_at": "2026-04-30T00:00:00Z"
+      },
+      "0.4.7": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.4.7.bin",
+        "checksum_sha256": "1673a8b8f79416b9da254e9a77bb073899e2141db2c53b23a6ac24647074d8a8",
+        "file_size": 1589600,
+        "min_battery": 20,
+        "release_notes": "Version 0.4.7 update",
+        "released_at": "2026-04-30T00:00:00Z"
+      },
+      "0.4.6": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.4.6.bin",
+        "checksum_sha256": "ecbe13739ab4b2f193882bf38b06f987b7ce22b6030efc273afa529dc4ace2d5",
+        "file_size": 1198496,
+        "min_battery": 20,
+        "release_notes": "Version 0.4.6 update",
+        "released_at": "2026-04-25T00:00:00Z"
       },
       "0.2.9": {
         "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.2.9.bin",
