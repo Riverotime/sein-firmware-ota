@@ -7,7 +7,7 @@
         "checksum_sha256": "f3102ed28144be3c4594b0832e4594dc79e3a01721e37cfb1a57acd7dfcb26e9",
         "file_size": 1789200,
         "min_battery": 20,
-        "release_notes": "单击进入语音会话(再单击结束,最长60秒);充电指示改为绿色呼吸、充满转常亮;精简运行日志",
+        "release_notes": "单击 highlight，充电指示改为绿色呼吸、充满转常亮;精简运行日志",
         "released_at": "2026-08-06T00:00:00Z"
       },
       "0.5.16": {
