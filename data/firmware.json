@@ -327,5 +327,18 @@
         "released_at": "2025-02-16T14:30:00Z"
       }
     }
+  },
+  "sein-pai-beta": {
+    "latest": "0.5.18",
+    "versions": {
+      "0.5.18": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.18.bin",
+        "checksum_sha256": "ce802eb93f9787ea0a38597be217b18900dae24fc5a66a0078725030c8302ef3",
+        "file_size": 1790064,
+        "min_battery": 20,
+        "release_notes": "公测:单击=收尾上一段+开新段+拍照(断连时也拍);离线音频补传自愈;历史照片补传;主动拍照不再被电量档拦截;充电橙呼吸、录音浅蓝灯语;BLE 广播看门狗",
+        "released_at": "2026-08-22T00:00:00Z"
+      }
+    }
   }
 }
