@@ -329,8 +329,16 @@
     }
   },
   "sein-pai-beta": {
-    "latest": "0.5.19",
+    "latest": "0.5.20",
     "versions": {
+      "0.5.20": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.20.bin",
+        "checksum_sha256": "d71961fde0a4e91964ffab18b3536f8c9a0103de5b82b3df3de33750c6f2c577",
+        "file_size": 1795216,
+        "min_battery": 20,
+        "release_notes": "公测:USB 串口命令 SETCOLOR/GETCOLOR/REBOOT——升级页免重置写入设备颜色(配对/WiFi 保留);其余同 0.5.19(双击+按住关机/按住说话/预捕获拍照/唯一ID+颜色广播)",
+        "released_at": "2026-08-23T00:00:00Z"
+      },
       "0.5.19": {
         "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.19.bin",
         "checksum_sha256": "a5468481713bf3edbb6f320928229c502f3c3399b0ef6c54ce0eb9503f1bceee",
