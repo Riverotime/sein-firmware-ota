@@ -26,6 +26,7 @@ export async function GET(
     file_size: latest.file_size,
     min_battery: latest.min_battery,
     release_notes: latest.release_notes,
-    released_at: latest.released_at
+    released_at: latest.released_at,
+    ...(latest.recovery_assets ? { recovery_assets: latest.recovery_assets } : {})
   })
 }

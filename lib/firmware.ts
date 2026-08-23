@@ -1,5 +1,19 @@
 import firmwareData from '@/data/firmware.json'
 
+export interface RecoveryAsset {
+  url: string
+  address: number
+  size: number
+  checksum_sha256: string
+}
+
+export interface RecoveryAssets {
+  bootloader: RecoveryAsset
+  partition_table: RecoveryAsset
+  ota_data_initial: RecoveryAsset
+  app: { address: number }
+}
+
 export interface FirmwareVersion {
   download_url: string
   checksum_sha256: string
@@ -7,6 +21,7 @@ export interface FirmwareVersion {
   min_battery: number
   release_notes: string
   released_at: string
+  recovery_assets?: RecoveryAssets
 }
 
 export interface DeviceFirmware {
