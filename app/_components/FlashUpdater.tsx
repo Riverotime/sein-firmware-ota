@@ -281,6 +281,65 @@ export default function FlashUpdater({ model, beta = false }: FlashUpdaterProps)
     }
   }
 
+  /** 写设备颜色:烧预置 dev_variant 的 NVS 镜像(0x10000)。本质=重置设备+写入颜色,
+   *  配对/WiFi 会一起清掉——所以只适合新机/公测首刷;已配对设备改色走 App 的 0x2A 指令。
+   *  镜像由 IDF nvs_partition_gen 预生成(dev_variant u16: 0x0101 银 / 0x0102 亮黑),
+   *  与固件 nvs.h、iOS SeinDeviceColor 枚举同表 */
+  const handleWriteColor = async (colorName: string, binPath: string) => {
+    if (!esploader) return
+    if (!window.confirm(
+      `确认把设备颜色写为「${colorName}」?\n\n` +
+      `注意:写入颜色会同时重置设备(清除蓝牙配对/WiFi 配置,固件不受影响),\n` +
+      `烧完设备自动重启,颜色随广播生效,需在 App 重新绑定。\n\n` +
+      `已配对设备只想改颜色请走 App 内设置,不要用这里。`
+    )) return
+    setFlashing(true)
+    setProgress(0)
+
+    try {
+      setStatus({ text: `正在下载「${colorName}」配置...`, type: 'working' })
+      const r = await fetch(binPath, { cache: 'no-cache' })
+      if (!r.ok) throw new Error(`无法加载颜色配置 (${r.status})`)
+      const nvsBytes = new Uint8Array(await r.arrayBuffer())
+      if (nvsBytes.length !== NVS_SIZE) {
+        throw new Error(`颜色配置大小不匹配: 期望 ${NVS_SIZE}, 实际 ${nvsBytes.length}`)
+      }
+
+      setStatus({ text: `正在写入设备颜色「${colorName}」...`, type: 'working' })
+      await esploader.writeFlash({
+        fileArray: [{ data: nvsBytes, address: NVS_OFFSET }],
+        flashSize: 'keep',
+        flashMode: 'keep',
+        flashFreq: 'keep',
+        eraseAll: false,
+        compress: true,
+        reportProgress: (_fileIndex: number, written: number, total: number) => {
+          setProgress(Math.round((written / total) * 100))
+        },
+      })
+      setStatus({ text: '正在重启设备...', type: 'working' })
+      try {
+        // 同 handleFlash 末尾:USB-Serial-JTAG 时序按 esptool.py 来,200ms + 200ms
+        await transport.setRTS(true)
+        await new Promise(r2 => setTimeout(r2, 200))
+        await transport.setRTS(false)
+        await new Promise(r2 => setTimeout(r2, 200))
+      } catch (resetErr) {
+        console.warn('自动重启失败:', resetErr)
+      }
+      setStatus({ text: `设备颜色已写为「${colorName}」并重启,请在 App 重新绑定`, type: 'success' })
+    } catch (err: any) {
+      setStatus({ text: '颜色写入失败: ' + (err.message || err), type: 'error' })
+      console.error(err)
+    } finally {
+      try { await transport?.disconnect() } catch {}
+      setTransport(null)
+      setEsploader(null)
+      setPortSelected(false)
+      setFlashing(false)
+    }
+  }
+
   const handleEraseNvs = async () => {
     if (!esploader) return
     if (!window.confirm('确认重置设备?\n\n将清除蓝牙配对、WiFi 配置和用户设置(固件本身不受影响),用于解绑/还原设备。\n操作不可撤销。')) return
@@ -397,8 +456,28 @@ export default function FlashUpdater({ model, beta = false }: FlashUpdaterProps)
           >
             重置设备
           </button>
+          <button
+            style={{
+              ...styles.button,
+              ...(!portSelected || flashing ? styles.disabled : {}),
+            }}
+            disabled={!portSelected || flashing}
+            onClick={() => handleWriteColor('闪光银', '/nvs_color_silver.bin')}
+          >
+            写入颜色:闪光银
+          </button>
+          <button
+            style={{
+              ...styles.button,
+              ...(!portSelected || flashing ? styles.disabled : {}),
+            }}
+            disabled={!portSelected || flashing}
+            onClick={() => handleWriteColor('亮黑·电镀', '/nvs_color_glossyblack.bin')}
+          >
+            写入颜色:亮黑
+          </button>
         </div>
-        <p style={styles.tip}>硬重启：免拔插重启设备，用于设备开不了机、按键没反应、或灯常亮连不上等卡死情况。重置设备：清除蓝牙配对和 WiFi 配置（固件保留），用于解绑设备、还原设备。</p>
+        <p style={styles.tip}>硬重启：免拔插重启设备，用于设备开不了机、按键没反应、或灯常亮连不上等卡死情况。重置设备：清除蓝牙配对和 WiFi 配置（固件保留），用于解绑设备、还原设备。写入颜色：把设备外观颜色（银/亮黑）写进设备，配对界面按它显示对应外观；<b>会同时重置配对</b>，适合新机首刷，需固件 v0.5.19+。</p>
       </div>
 
       <div style={styles.card}>
