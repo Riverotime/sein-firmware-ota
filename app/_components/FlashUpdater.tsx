@@ -464,28 +464,33 @@ export default function FlashUpdater({ model, beta = false }: FlashUpdaterProps)
           >
             重置设备
           </button>
-          <button
-            style={{
-              ...styles.button,
-              ...(portSelected || flashing ? styles.disabled : {}),
-            }}
-            disabled={portSelected || flashing}
-            onClick={() => handleWriteColorSerial('闪光银', '01')}
-          >
-            写入颜色:闪光银
-          </button>
-          <button
-            style={{
-              ...styles.button,
-              ...(portSelected || flashing ? styles.disabled : {}),
-            }}
-            disabled={portSelected || flashing}
-            onClick={() => handleWriteColorSerial('亮黑·电镀', '02')}
-          >
-            写入颜色:亮黑
-          </button>
+          {/* 写入颜色只在公测页开放(2026-08-23 用户):正式版用户不该碰出厂属性 */}
+          {beta && (
+            <>
+              <button
+                style={{
+                  ...styles.button,
+                  ...(portSelected || flashing ? styles.disabled : {}),
+                }}
+                disabled={portSelected || flashing}
+                onClick={() => handleWriteColorSerial('闪光银', '01')}
+              >
+                写入颜色:闪光银
+              </button>
+              <button
+                style={{
+                  ...styles.button,
+                  ...(portSelected || flashing ? styles.disabled : {}),
+                }}
+                disabled={portSelected || flashing}
+                onClick={() => handleWriteColorSerial('亮黑·电镀', '02')}
+              >
+                写入颜色:亮黑
+              </button>
+            </>
+          )}
         </div>
-        <p style={styles.tip}>硬重启：免拔插重启设备，用于设备开不了机、按键没反应、或灯常亮连不上等卡死情况。重置设备：清除蓝牙配对和 WiFi 配置（固件保留），用于解绑设备、还原设备。写入颜色：把设备外观颜色（银/亮黑）写进设备，App 配对界面按它显示对应外观；<b>不清任何数据</b>，需固件 v0.5.20+ 且设备处于开机运行状态（不用先点"选择端口"，直接点色即可）。</p>
+        <p style={styles.tip}>硬重启：免拔插重启设备，用于设备开不了机、按键没反应、或灯常亮连不上等卡死情况。重置设备：清除蓝牙配对和 WiFi 配置（固件保留），用于解绑设备、还原设备。{beta && <>写入颜色：把设备外观颜色（银/亮黑）写进设备，App 配对界面按它显示对应外观；<b>不清任何数据</b>，需固件 v0.5.20+ 且设备处于开机运行状态（不用先点"选择端口"，直接点色即可）。</>}</p>
       </div>
 
       <div style={styles.card}>
