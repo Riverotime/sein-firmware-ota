@@ -1,7 +1,15 @@
 {
   "sein-pai": {
-    "latest": "0.5.17",
+    "latest": "0.5.20",
     "versions": {
+      "0.5.20": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.20.bin",
+        "checksum_sha256": "d71961fde0a4e91964ffab18b3536f8c9a0103de5b82b3df3de33750c6f2c577",
+        "file_size": 1795216,
+        "min_battery": 20,
+        "release_notes": "关机手势改为双击+按住2秒(防误触);长按0.3秒=按住说话;单击拍照提速(快门对齐按下瞬间);配对识别升级(设备唯一ID与颜色进广播)",
+        "released_at": "2026-08-23T00:00:00Z"
+      },
       "0.5.17": {
         "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.17.bin",
         "checksum_sha256": "f3102ed28144be3c4594b0832e4594dc79e3a01721e37cfb1a57acd7dfcb26e9",
