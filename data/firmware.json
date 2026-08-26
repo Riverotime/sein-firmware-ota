@@ -337,8 +337,16 @@
     }
   },
   "sein-pai-beta": {
-    "latest": "0.5.20",
+    "latest": "0.5.23",
     "versions": {
+      "0.5.23": {
+        "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.23.bin",
+        "checksum_sha256": "a2b3c821b9d0050ae619307f140230b6faf6768c6e54733bbb5a94c070613a12",
+        "file_size": 1799776,
+        "min_battery": 20,
+        "release_notes": "公测:修复离线录音积压把蓝牙链路占满、导致实时音频长时间收不到的问题——补传给实时音频让路,并定期让出带宽;离线录音按停顿分段存储(单个文件不再无限增大);开机清理历史超大录音文件",
+        "released_at": "2026-08-26T00:00:00Z"
+      },
       "0.5.20": {
         "download_url": "https://we9thlyogczx4hk2.public.blob.vercel-storage.com/sein-pai_0.5.20.bin",
         "checksum_sha256": "d71961fde0a4e91964ffab18b3536f8c9a0103de5b82b3df3de33750c6f2c577",
